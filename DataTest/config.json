@@ -1,0 +1,28 @@
+{
+"master":{"roothost":"127.0.0.1", "rootport":10010, "webport":10009},
+
+"servers":{
+    "gate":{
+        "rootport":11011,
+        "name":"gate",
+        "app":"app.gateserver",
+        "db":true,
+        "nem":true
+    }
+},
+
+"db":{
+    "host":"127.0.0.1",
+    "user":"root",
+    "passwd":"123456",
+    "port":3306,
+    "db":"yy",
+    "charset":"utf8"
+},
+
+"memcached":{
+    "urls":["127.0.0.0:11211"],
+    "hostname":"yy"
+}
+}
+
