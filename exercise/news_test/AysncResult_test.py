@@ -13,8 +13,8 @@ class Calc(object):
         for i in xrange(10):
             self.mydict[i] = i
         if isFlag:
-            self.async = AsyncResult()
-            self.mylist.extend(self.async.get())
+            # self.async = AsyncResult()
+            self.mylist.extend(self.async.get(True,10))
             print "get value for aysnc", self.mylist
         mylist = self.mylist
         return mylist
@@ -22,7 +22,7 @@ class Calc(object):
     def calcNumberHandler(self, numList):
         print "handler begin..."
         if numList:
-            gevent.sleep(10)
+            self.async = AsyncResult()
             self.async.set(numList)
             print "save the list"
             return True
